@@ -10,3 +10,10 @@ Tools used
 <div align="center">
   <a href="https://www.youtube.com/watch?v=WBi_PZ66z5E&feature=youtu.be"><img src="https://img.youtube.com/vi/WBi_PZ66z5E/0.jpg" alt="Demo"></a>
 </div>
+
+Technical Details
+* Extractor Deep Neural Network - State of the art MobileNet
+* Classifier Deep Neural Network - DenseNet
+* HyperParameters can be tuned via User Interface.
+
+Emotion Animations taken from - https://dribbble.com/shots/2589640-Emotion-Animations-gif
