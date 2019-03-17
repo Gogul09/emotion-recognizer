@@ -69,7 +69,7 @@ function startWebcam() {
 		audio: false
 	}, function(stream) {
 		localStream = stream;
-		video.src = vendorUrl.createObjectURL(stream);
+		video.srcObject = stream;
 		video.play();
 		isWebcamOn = 1;
 	}, function(error) {
@@ -262,7 +262,7 @@ async function train() {
 //-------------------------------------
 async function loadExtractor() {
 	// load mobilenet from Google
-	const mobilenet = await tf.loadModel("https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json");
+	const mobilenet = await tf.loadLayersModel("https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json");
 
 	// return the mobilenet model with 
 	// internal activations from "conv_pw_13_relu" layer
