@@ -1,7 +1,8 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito", sans-serif;
+  overflow: hidden; }
 
 .container {
   width: 100%;
@@ -56,8 +57,11 @@ footer {
 
 .emotion-container {
   height: 100vh;
-  background-color: #1a1c22;
-  margin: 0px; }
+  background-color: #252525;
+  margin: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px; }
   @media screen and (max-width: 640px) {
     .emotion-container {
       height: 100%;
@@ -67,14 +71,20 @@ footer {
 .emotion-header {
   width: 100%;
   text-align: center;
-  background-color: black;
-  padding: 20px 0px; }
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background-color: #252525;
+  padding-top: 20px; }
+  @media screen and (max-width: 640px) {
+    .emotion-header {
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px; } }
   .emotion-header h3 {
     margin: 0px;
     padding: 0px;
     font-size: 25px;
-    color: #9f56d4;
-    font-family: "Nunito", sans-serif; }
+    color: #d3131c;
+    font-family: "Poppins"; }
     @media screen and (max-width: 640px) {
       .emotion-header h3 {
         font-size: 20px; } }
@@ -85,42 +95,57 @@ footer {
     font-size: 13px; }
 
 .emotion-wrapper {
-  background-color: black;
+  background-color: #252525;
+  padding: 20px;
   width: 100%;
-  height: 85%;
+  height: 80%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   display: flex;
   flex-wrap: wrap; }
   @media screen and (max-width: 640px) {
     .emotion-wrapper {
-      display: block; } }
+      display: block;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px; } }
 
 .emotion-flex {
   flex: 1;
   width: 100%;
   height: 100%;
-  background-color: #131519; }
+  background-color: #252525; }
 
 .emotion-player {
+  padding: 20px 0px;
   border-right: 1px solid #252933; }
   @media screen and (max-width: 640px) {
     .emotion-player {
       border-bottom: 1px solid #252933;
       border-right: 0px; } }
 
+.emotion-controller {
+  display: flex;
+  flex-direction: column; }
+
 .emotion-tuner {
   display: flex;
   width: 100%;
   text-align: center;
-  padding: 50px 0px; }
+  flex: 1; }
   @media screen and (max-width: 640px) {
     .emotion-tuner {
       flex-wrap: wrap;
       padding: 5%; } }
   .emotion-tuner .emotion-dropdown {
-    flex: 1; }
+    flex: 1;
+    display: table;
+    height: 100%; }
+    .emotion-tuner .emotion-dropdown .emotion-dropdown-cell {
+      vertical-align: middle;
+      display: table-cell; }
   .emotion-tuner select {
     display: inline-block;
-    background-color: #000000;
+    background-color: #181818;
     border: 0px;
     color: lightgrey;
     border-bottom: 1px solid #424242;
@@ -143,11 +168,11 @@ footer {
   text-align: center;
   justify-content: center;
   width: 100%;
-  padding: 30px 0px; }
+  flex: 1; }
   .emotion-acquire .emotion-acquire-outer {
     padding: 10px 0px;
-    background-color: black;
-    border: 1px solid #3c3c3c;
+    background-color: #181818;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
     border-radius: 3px;
     margin: 0 20px;
     flex: 1;
@@ -171,7 +196,7 @@ footer {
     .emotion-acquire .emotion-acquire-inner p {
       margin: 0px;
       margin-bottom: 0px !important;
-      font-size: 18px;
+      font-size: 15px;
       color: lightgrey;
       text-align: center;
       padding: 3px;
@@ -179,18 +204,12 @@ footer {
       bottom: 0px;
       width: 100%; }
     .emotion-acquire .emotion-acquire-inner .emotion-acquire-cam img {
-      width: 90px;
-      height: 100px;
       border: 0px !important; }
-      @media screen and (max-width: 640px) {
-        .emotion-acquire .emotion-acquire-inner .emotion-acquire-cam img {
-          width: 85px;
-          height: 85px; } }
   .emotion-acquire p {
     margin: 0px;
     margin-bottom: 0px !important;
     font-size: 10px;
-    color: #b773e9;
+    color: #d4141d;
     text-align: center;
     padding: 3px;
     width: 100%; }
@@ -201,20 +220,21 @@ footer {
   text-align: center;
   justify-content: center;
   width: 100%;
-  padding: 10px 0px; }
+  flex: 1; }
   @media screen and (max-width: 640px) {
     .emotion-buttons {
       display: block; } }
   .emotion-buttons button {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: 5px solid #462c59;
-    padding: 20px;
-    background-color: #7c47a3;
+    border: 5px double #b9171e;
+    box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: #d4141d;
     color: white;
-    font-size: 20px;
-    font-family: Nunito;
+    font-size: 15px;
+    font-family: Roboto;
     font-weight: bold;
     margin: 0 20px;
     cursor: pointer;
@@ -235,20 +255,21 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 50px; }
+  height: 45%; }
   @media screen and (max-width: 640px) {
     .emotion-kit {
       padding-top: 0px; } }
   .emotion-kit .emotion-kit-comps {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: #ffffff;
     border-radius: 10px;
-    border: 6px solid #e9e9e9;
+    border: 6px solid #ffffff;
     margin: 10px;
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.4); }
     @media screen and (max-width: 640px) {
       .emotion-kit .emotion-kit-comps {
         width: 60px;
@@ -281,14 +302,14 @@ footer {
 
 .emotion-live-cam {
   width: 100%;
-  padding-top: 50px; }
+  height: 55%; }
   .emotion-live-cam div {
     width: 250px;
     height: 250px;
-    background-color: black;
+    background-color: #181818;
     border-radius: 10px;
     margin: 0px auto;
-    border: 2px solid #7a7a7a;
+    box-shadow: 6px 8px 8px rgba(0, 0, 0, 0.55);
     overflow: hidden; }
     @media screen and (max-width: 640px) {
       .emotion-live-cam div {
@@ -306,9 +327,15 @@ footer {
 .emotion-loss {
   color: #e13527;
   font-size: 15px;
-  text-align: center;
   margin-bottom: 0px !important;
   margin: 0px !important;
-  padding: 0px 20px !important; }
+  padding: 0px 20px !important;
+  display: flex;
+  position: relative;
+  bottom: 25px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  justify-content: center; }
 
 /*# sourceMappingURL=app.css.map */

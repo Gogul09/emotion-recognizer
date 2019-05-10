@@ -141,7 +141,7 @@ function captureSample(id, label) {
 // to be mobilenet friendly
 //------------------------------------
 function preprocessImage(img) {
-	const tensor        = tf.fromPixels(img)
+	const tensor        = tf.browser.fromPixels(img)
 						  .resizeNearestNeighbor([224, 224]);
 	const croppedTensor = cropImage(tensor);
 	const batchedTensor = croppedTensor.expandDims(0);
